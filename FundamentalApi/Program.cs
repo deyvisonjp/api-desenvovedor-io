@@ -15,7 +15,23 @@ builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
     {
         options.SuppressModelStateInvalidFilter = true; // Retiro a validação do Model, chega no controller
-    }); 
+    });
+
+// CORS - Browser implementa o cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Development", builder =>
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+    options.AddPolicy("Development", builder =>
+       builder
+           .WithOrigins("https://localhost:9000")
+           .WithMethods("POST")
+           .AllowAnyHeader());
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -91,6 +107,11 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("Development");
+}
+else
+{
+    app.UseCors("Production");
 }
 
 app.UseHttpsRedirection();

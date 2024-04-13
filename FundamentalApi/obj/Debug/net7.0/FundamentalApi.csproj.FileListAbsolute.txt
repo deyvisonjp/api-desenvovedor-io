@@ -8,6 +8,7 @@ C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debu
 C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Humanizer.dll
+C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\a841068\EstudosCursosAcelera\Ace_Senior_II\APIs\FundamentalApi\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

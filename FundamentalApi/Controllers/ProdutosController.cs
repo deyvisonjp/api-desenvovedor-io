@@ -1,11 +1,13 @@
 ﻿using FundamentalApi.Data;
 using FundamentalApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace FundamentalApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/produtos")]
     public class ProdutosController : ControllerBase
@@ -28,6 +30,7 @@ namespace FundamentalApi.Controllers
             return await _context.Produtos.ToListAsync();
         }
 
+        [AllowAnonymous]
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -107,6 +110,7 @@ namespace FundamentalApi.Controllers
             return NoContent();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
